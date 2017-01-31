@@ -1,0 +1,16 @@
+def body_mass_index(height = "63.8", weight = "166.2"):
+	BMI = weight/height**2
+	return BMI
+
+looping = True
+while looping:
+	looping = False
+	try:
+		weight = float(input("How much fo you weigh"))
+		height = float(input("How tall are you?"))
+
+	except ValueError:
+		looping = True
+
+print(BMI(height,weight))
+

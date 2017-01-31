@@ -1,0 +1,22 @@
+1) It is convenient to represent the change in expression for each gene in each experiment
+ as a log2 ratio because the results of many DNA microarray experiments are
+fluorescent ratios. As such, ratio measurements are best processed in log space. For examp
+le, if you are looking at gene expression over time, and the results are relative expressi
+on levels as compared to time 0. If we consider that at timepoint 1, a gene is unchanged, 
+at timepoint 2 it is up 2-fold, and at timepoint 3 it is down 2-fold (relative to time 0).
+ Then, the raw values are 1.0, 2.0, and 0.5 respectively. However, we want to think of 2-f
+old up and 2-fold down as the same magnitude of change, just in an opposite direction. In 
+log space, the data points become 0, 1.0, and -1.0, meaning the 2-fold up and down are sym
+metric about 0. If we were to use the raw ratios of these timepoints, on the other hand, w
+e would think that a 2-fold up change was twice as significant as a 2-fold down change, wh
+ich is not what we want. Furthermore, once you log transform data, you make the variation similar across orders of magnitude. In essence, log transformation of your data makes it more symmetrical, and therefore lends itself to a more accurate and relevant biological answer.
+
+2) XCluster allows you to use a Pearson correlation (as the default) or a Euclidean distan
+ce to calculate pairwise distances between genes' vectors. First and foremost, Euclidean d
+istance is sensitive to scaling and differences in average expression level, whereas corre
+lation is not. Thus, for log2 ratio transformed data,  Euclidean distance  may be used whe
+n we consider genes to be close to one another either when they go up and down together, o
+r in opposition (i.e. wherever one gene overexpresses, the other gene underexpresses and v
+ice versa). If Euclidean distance is chosen to cluster samples, then observations with hig
+h values will be clustered together, and likewise observations with low values will be clu
+stered together. In addition, Pearson correlation should not be used on highly skewed data as it will provide misleading results. It can be very sensitive to noise and outliers. Thus, in a case when the variables are not normally distributed or the relationship between the variables is not linear, it would be more appropriate to use the Euclidean distance. While Euclidean distance may be used for gene expression data, Pearson's correlation is often used for patient data, for example looking at age and blood pressure. 
