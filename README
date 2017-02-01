@@ -1,0 +1,22 @@
+Question 3) The cellular compenent that the coexpressed genes are enriched for is the nucleus.
+Colored boxes do not exist.
+
+Question 4) A p-value is calculated based on the mean difference in abundance between groups, 
+the variance (range over which the abundance values fall), and the sample size. What the p-value
+measures is how likely you are to get this compound data if no real difference existed (observed
+vs. predicted). A small p-value means that there is a small chance of getting this data, and therefor
+that differential expression is significant. 
+
+Thus, the difference between the two ontologies comes 
+from the fact that you are more likely to find genes that are localized to the nucleus in a cell
+than for a large number of those same genes to also be involved in DNA replication (ie. there are more genes
+which are localized to the nucleus than there are involved in DNA replication, so the fact that you 
+are sampling so many genes which are involved in DNA replication is more significant/lower p-value). 
+
+To calculate an FDR, you must first set a cut off value, for which an p-value that is less than your cut off
+value is considered significant, or, positive. For example, a p-value of 0.05. A false positive is therefor
+when something is called as significant when it reality, it is not. A cut off of 0.05 means that there is a
+5% chance something will  be called positive that should not be. 
+
+Question 5) Because this data was generated during the cell cycle, I would predict that they are co-expressed
+because they share a similar regulatory mechanism that is triggered prior to DNA replication. 
