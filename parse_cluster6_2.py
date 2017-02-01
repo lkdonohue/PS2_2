@@ -54,7 +54,6 @@ def find_highest_node(input_gene, new_node):
 
 		return find_highest_node(last_node, best_node) 	#need to keep track of the new last and possibly new best node before you go through the function again
 
-
 	return best_node 	#want what you return to ONLY be the best node
 
 output = (find_highest_node(input_gene, input_gene))    # output from the highest_node_function will return your highest node
@@ -73,6 +72,7 @@ def find_genes(input_node):
 		print(gene_id_ORF_dict[child_1_dict[input_node]])	#ONLY the ORFs of the genes are to be printed, NOT nodes or the gene ids
 	else:
 		find_genes(child_1_dict[input_node])	#if a node is found instead of a gene, run the function again using THAT node as the input node
+
 	if child_2_dict[input_node].startswith("GENE"):	#same as for child_1_dict
 		print(gene_id_ORF_dict[child_2_dict[input_node]])
 	else:
