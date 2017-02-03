@@ -1,4 +1,4 @@
-Question 3) The cellular compenent that the coexpressed genes are enriched for is the nucleus.
+Question 3) The cellular component that the coexpressed genes are enriched for is the nucleus.
 Colored boxes correspond to different p-values. 
 
 Question 4) A p-value is calculated based on the mean difference in abundance between groups, 
@@ -9,7 +9,7 @@ that differential expression is significant.
 
 Thus, the difference between the two ontologies comes 
 from the fact that you are more likely to find genes that are localized to (components of) the nucleus in a cell
-than for a large number of those same genes to also be involved in DNA replication (ie. there are more genes
+than for a large number of those same genes to also be involved in DNA replication (i.e. there are more genes
 which are localized to the nucleus than there are involved in DNA replication, so the fact that you 
 are sampling so many genes which are involved in DNA replication at a high frequency is more significant/lower p-value). 
 
@@ -21,5 +21,5 @@ when something is called as significant when it reality, it is not. A cut off of
 Question 5) Because this data was generated during the cell cycle, I would predict that they are co-expressed
 because they share a similar regulatory mechanism that is triggered prior to DNA replication. The idea being, the genes
 were found to be closely correlated according to Pearson's Correlation, meaning they were closely aligned along 
-the same vector in space. It follws that this similar slope reflects the biology of being induced by a similar 
+the same vector in space. It follows that this similar slope reflects the biology of being induced by a similar 
 regulatory mechanism, resulting in co-expression, and DNA replication takes place. 
